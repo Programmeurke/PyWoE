@@ -62,7 +62,7 @@ class WoE:
         if not isinstance(y, pd.Series):
             y = pd.Series(y)
         if not x.size == y.size:
-            raise Exception("Y size don't match Y size")
+            raise Exception("X size doesn't match Y size")
         # Calc total good bad ratio in the sample
         t_bad = np.sum(y)
         if t_bad == 0 or t_bad == y.size:
